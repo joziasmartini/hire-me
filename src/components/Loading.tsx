@@ -22,15 +22,15 @@ function LinearProgressWithLabel(
   );
 }
 
-export default function LinearWithValueLabel() {
+export default function Loading() {
   const [progress, setProgress] = React.useState(10);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 100 ? 10 : prevProgress + 10
+        prevProgress >= 100 ? 1 : prevProgress + 1
       );
-    }, 800);
+    }, 5);
     return () => {
       clearInterval(timer);
     };
@@ -38,17 +38,7 @@ export default function LinearWithValueLabel() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <LinearProgressWithLabel
-        value={progress}
-        sx={{
-          height: "10px",
-          borderRadius: "10px",
-          backgroundColor: "#e0e0e0",
-          "& .MuiLinearProgress-barColorPrimary": {
-            backgroundColor: "green",
-          },
-        }}
-      />
+      <LinearProgress variant="determinate" value={progress} />
     </Box>
   );
 }
