@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { AccessibilityNewOutlined } from "@mui/icons-material";
 import Loading from "./components/Loading";
 import "./App.css";
 import PostCard from "./components/PostCard";
 import Subtitle from "./components/Subtitle";
 import Title from "./components/Title";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -55,7 +55,7 @@ function App() {
         </div>
       )}
 
-      {error && <span className="text-red-500">{error}</span>}
+      {error && <ErrorMessage error="Something went wrong, please refresh." />}
     </div>
   );
 }
