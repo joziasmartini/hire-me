@@ -27,7 +27,7 @@ export default function PostCard({ image, title, description }: PostCardProps) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          See more
         </Button>
       </CardActions>
     </Card>

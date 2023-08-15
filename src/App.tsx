@@ -3,6 +3,8 @@ import { AccessibilityNewOutlined } from "@mui/icons-material";
 import Loading from "./components/Loading";
 import "./App.css";
 import PostCard from "./components/PostCard";
+import Subtitle from "./components/Subtitle";
+import Title from "./components/Title";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -25,24 +27,17 @@ function App() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-neutral-100">
       <div className="flex flex-col items-center justify-center">
-        <span className="block mt-4 text-3xl">
-          Hey, this{" "}
-          <AccessibilityNewOutlined className="text-green-700 text-7xl" /> is me
-        </span>
-        <span className="block text-neutral-500">
-          I'm waiting for you to hire me
-        </span>
+        <Title text="Hey, it's good to see you" />
+        <Subtitle text="I will show some of my skills" />
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <span className="block mt-4 text-3xl">Here some posts and images</span>
-        <span className="block text-neutral-500">
-          They are consumed from two different APIs
-        </span>
+        <Title text="Here some posts and images" />
+        <Subtitle text="They are consumed from two different APIs" />
       </div>
 
       {!error && posts.length > 0 && (
-        <div className="grid items-start content-center grid-cols-1 gap-2 mt-8 max-w-3/4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid items-start content-center grid-cols-1 gap-8 mt-8 max-w-3/4 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post: any) => (
             <PostCard
               key={post.title}
