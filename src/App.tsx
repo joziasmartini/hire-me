@@ -1,6 +1,6 @@
+import "./App.css";
 import { useState } from "react";
 import Loading from "./components/Loading";
-import "./App.css";
 import PostCard from "./components/PostCard";
 import Subtitle from "./components/Subtitle";
 import Title from "./components/Title";
@@ -26,9 +26,11 @@ function App() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-neutral-100">
-      <div className="flex flex-col items-center justify-center">
-        <Title text="Hey, it's good to see you" />
-        <Subtitle text="I will show some of my skills" />
+      <div className="w-4/5 p-8 mt-8 text-white bg-indigo-600">
+        <div className="flex flex-col items-center justify-center">
+          <Title text="Hey, it's good to see you" />
+          <Subtitle text="I will show some of my skills" />
+        </div>
       </div>
 
       <div className="flex flex-col items-center justify-center">

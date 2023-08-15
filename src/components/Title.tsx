@@ -3,5 +3,5 @@ type TitleProps = {
 };
 
 export default function Title({ text }: TitleProps) {
-  return <h1 className="block mt-4 text-3xl">{text}</h1>;
+  return <h1 className="block mt-4 text-3xl font-medium">{text}</h1>;
 }
