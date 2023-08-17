@@ -5,6 +5,7 @@ import PostCard from "./components/PostCard";
 import Subtitle from "./components/Subtitle";
 import Title from "./components/Title";
 import ErrorMessage from "./components/ErrorMessage";
+import { IPost } from "./utils/types";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -40,7 +41,7 @@ function App() {
 
       {!error && posts.length > 0 && (
         <div className="grid items-start content-center grid-cols-1 gap-8 mt-8 max-w-3/4 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post: any) => (
+          {posts.map((post: IPost) => (
             <PostCard
               key={post.title}
               image={"https://source.unsplash.com/random/500x200/?work"}
