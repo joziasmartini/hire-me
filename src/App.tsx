@@ -6,6 +6,7 @@ import Subtitle from "./components/Subtitle";
 import Title from "./components/Title";
 import ErrorMessage from "./components/ErrorMessage";
 import { IPost } from "./utils/types";
+import Me from "./assets/me.png";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -26,15 +27,15 @@ function App() {
   fetchPosts();
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-neutral-100">
-      <div className="w-4/5 p-8 mt-8 text-white bg-indigo-600">
-        <div className="flex flex-col items-center justify-center">
-          <Title text="Hey, it's good to see you" />
-          <Subtitle text="I will show some of my skills" />
+    <div className="flex flex-col items-center min-h-screen bg-neutral-100 text-neutral-800">
+      <div className="flex justify-center w-full p-8 bg-neutral-300">
+        <div className="flex flex-col items-center justify-center pb-4">
+          <Title text="Hey, I'm Jozias Martini" />
+          <Subtitle text="Thank you for this opportunity" />
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mt-8">
         <Title text="Here some posts and images" />
         <Subtitle text="They are consumed from two different APIs" />
       </div>
